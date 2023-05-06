@@ -2,6 +2,20 @@
 ### Описание
 Проект YaMDb собирает отзывы пользователей на произведения.
 
+
+### Ссылка на документцию
+
+http://84.201.174.174/redoc/
+
+### Доступ к админке
+
+http://84.201.174.174/admin/
+
+Логин:
+review
+Пароль:
+review_pass
+
 ![example workflow](https://github.com/Ilyako78/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Стек технологий
