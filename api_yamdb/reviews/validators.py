@@ -1,7 +1,6 @@
 from datetime import datetime
-
-from django.core.validators import RegexValidator
 from django.core.exceptions import ValidationError
+from django.core.validators import RegexValidator
 
 
 SLUG_VALIDATOR = RegexValidator(r'^[-a-zA-Z0-9_]+$')
