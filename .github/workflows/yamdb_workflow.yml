@@ -59,6 +59,7 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
+          context: api_yamdb
           tags: ilyako78/api_yamdb:latest
   deploy:
     runs-on: ubuntu-latest
