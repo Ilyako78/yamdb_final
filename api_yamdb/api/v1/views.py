@@ -1,29 +1,27 @@
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
+from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from django.db.models import Avg
-
-from rest_framework.pagination import PageNumberPagination
-from rest_framework import filters, permissions, status
-from rest_framework import mixins, viewsets
+from rest_framework import filters, mixins, permissions, status, viewsets
 from rest_framework.decorators import action
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
+from reviews.models import Category, Genre, Review, Title
+from users.models import User
 
 from api_yamdb.settings import DEFAULT_FROM_EMAIL
-from users.models import User
-from reviews.models import Category, Genre, Review, Title
+
 from .filters import TitleFilter
 from .mixins import CreateListDestroyMixinSet
-from .permissions import (AdministratorEdit, IsAdminOrReadOnly,
-                          IsAdminOrModeratirOrAuthor,)
-from .serializers import (CreateUserSerializer, GetTokenSerializer,
-                          UserSerialiser, SelfEditSerializer,
-                          CategorySerializer, GenreSerializer,
-                          TitleReadSerializer, TitleWriteSerializer,
-                          ReviewSerializer, CommentSerializer)
+from .permissions import (AdministratorEdit, IsAdminOrModeratirOrAuthor,
+                          IsAdminOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          CreateUserSerializer, GenreSerializer,
+                          GetTokenSerializer, ReviewSerializer,
+                          SelfEditSerializer, TitleReadSerializer,
+                          TitleWriteSerializer, UserSerialiser)
 
 
 class UserViewSet(viewsets.ModelViewSet):

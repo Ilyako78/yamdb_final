@@ -1,12 +1,11 @@
-from rest_framework import serializers
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 from django.shortcuts import get_object_or_404
+from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-
-from users.models import User
 from reviews.models import Category, Comment, Genre, Review, Title
 from reviews.validators import year_validator
+from users.models import User
 
 
 class UserSerialiser(serializers.ModelSerializer):
