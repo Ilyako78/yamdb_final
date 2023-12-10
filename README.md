@@ -5,7 +5,7 @@
 
 
 
-![example workflow](https://github.com/Ilyako78/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 
 ### Стек технологий
 
