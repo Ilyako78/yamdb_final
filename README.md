@@ -6,6 +6,11 @@
 ![example workflow](https://github.com/Ilyako78/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
+### Ссылка на документцию
+
+http://89.104.67.243/redoc/
+
+
 ### Стек технологий
 
 Python 3.7
@@ -24,6 +29,7 @@ PostgreSQL
 
 Git
 
+GitHub Actions
 
 ### Шаблон файла .env
 
@@ -41,23 +47,37 @@ DB_PORT=5432 # порт для подключения к БД
 
 ### Запуск проекта в контейнере
 
-docker-compose up -d --build
+docker compose up -d --build
 
-docker-compose exec web python manage.py migrate
+docker compose exec web python manage.py migrate
 
-docker-compose exec web python manage.py createsuperuser
+docker compose exec web python manage.py createsuperuser
 
-docker-compose exec web python manage.py collectstatic --no-input
+docker compose exec web python manage.py collectstatic --no-input
 
 ### Сделать резервную копию
 
-docker-compose exec web python manage.py dumpdata > fixtures.json
+docker compose exec web python manage.py dumpdata > fixtures.json
 
 ### Восстановить из резервной копии
 
 docker cp fixtures.json <имя контейнера>:app/
 
-docker-compose exec web python manage.py loaddata fixtures.json
+docker compose exec web python manage.py loaddata fixtures.json
+
+## Файлы настроек
+
+Nginx:
+infra/nginx/default.conf
+
+Docker:
+api_yamdb/Dockerfile
+
+Docker compose:
+infra/docker-compose.yaml
+
+Workflow:
+.github/workflows/yamdb_workflow.yml
 
 ## Примеры
 Полная спецификация api
