@@ -14,7 +14,7 @@
 
 ### Ссылка на документцию
 
-http://89.104.67.243/redoc/
+http://yamdb.mikonsgame.ru/redoc/
 
 
 ### Стек технологий
