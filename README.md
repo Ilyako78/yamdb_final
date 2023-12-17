@@ -2,9 +2,12 @@
 ### Описание
 Проект YaMDb собирает отзывы пользователей на произведения.
 
+### Ссылка на документцию
+
+http://84.201.174.174/redoc/
 
 
-
+![example workflow](https://github.com/Ilyako78/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
 ### Стек технологий
@@ -94,10 +97,4 @@ python3 manage.py upload_db
 ## Авторы
 
 https://github.com/Ilyako78
-
-https://github.com/Alexey-Roman
-
-https://github.com/SmallRiot
-
-
 
