@@ -7,6 +7,7 @@
 - Сборка приложения в контейнер Docker и размещение его на Docker hub
 - Деплой проекта на сервере
 - Отправка сообщения в телеграм при успешном деплое проекта.
+-
 
 
 ![example workflow](https://github.com/Ilyako78/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
